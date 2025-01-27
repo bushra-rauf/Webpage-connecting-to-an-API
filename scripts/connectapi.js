@@ -1,4 +1,4 @@
-// Add the event listener for the button click
+// Add the event listener 
 document.addEventListener("DOMContentLoaded", () => {
     const fetchButton = document.querySelector("button");
     fetchButton.addEventListener("click", fetchData); // Attach event listener to button
