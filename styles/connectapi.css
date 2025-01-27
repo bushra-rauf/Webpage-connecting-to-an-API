@@ -1,0 +1,95 @@
+/* connectapi.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#input-container {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#city {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#weather-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+#location-info, #current-weather {
+    margin-bottom: 20px;
+}
+
+.weather-info p {
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+    
+    .page-title {
+        font-size: 2em;
+    }
+    
+    #input-container, #weather-container {
+        padding: 15px;
+    }
+    
+    button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+}
