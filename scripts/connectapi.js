@@ -10,15 +10,15 @@ function  fetchData(){
     const city = document.getElementById("city").value;
         console.log(city);
 
-    // Check if data is in localStorage
-        const cachedData = localStorage.getItem(city);
+// Check if data is in localStorage
+        const cachedData = localStorage.getItem("city");
            if (cachedData) {
              console.log("Using cached data");
              displayData(JSON.parse(cachedData));
             } else {
              console.log("Fetching new data");
-
-    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=665a5354a85e4b75b40160832252601&q=" + city;
+            
+    const apiUrl = "https://api.weatherapi.com/v1/current.json?key=665a5354a85e4b75b40160832252601&q=" + city;
 
     fetch(apiUrl)
     .then(response =>   {
@@ -33,7 +33,7 @@ function  fetchData(){
         displayData(data);
 
         // Cache the data in localStorage
-        localStorage.setItem(city, JSON.stringify(data));
+        localStorage.setItem("city", JSON.stringify(data));
     })
 
    .catch( error =>{
@@ -42,6 +42,7 @@ function  fetchData(){
 
     })
 }
+
 
 // function displayData(data){
 // document.getElementById("city-name").textContent = data.location.name;
@@ -89,3 +90,6 @@ function displayData(data) {
     }
 }
 }
+
+
+
